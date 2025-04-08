@@ -1,0 +1,17 @@
+/*Style.CSS*/
+/*Área de definição de regras @*/
+@charset "UTF-8";
+/*Cometário aqui é diferente*/
+/*Estilos definidos para minha pagina*/
+body {
+    background-color: gray;
+}
+h1 {
+color: white;
+}
+h2 {
+    color: brown;
+}
+p {
+    color: blue;
+}
