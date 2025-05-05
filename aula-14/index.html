@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+    <style>
+.exemplo {
+    width: 300px;
+    height: 50px;
+    background-color: lightgray;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    padding: 20px;
+    outline-style: solid;
+    outline-width: 25px;
+    outline-color: blue;
+    margin: 50px;
+    display: inline-block;
+}
+
+.de {
+    width: 300px;
+    height: 50px;
+    background-color: lightgray;
+    border-width: 10px;
+    border-style: solid;
+    border-color: blue;
+    padding: 20px;
+    outline-style: solid;
+    outline-width: 25px;
+    outline-color: red;
+    margin: 50px;
+    display: inline-block;
+}
+
+.caixa {
+    width: 300px;
+    height: 50px;
+    background-color: lightgray;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    padding: 20px;
+    outline-style: solid;
+    outline-width: 25px;
+    outline-color: blue;
+    margin: 50px;
+    display: inline-block;
+}
+
+.simples{
+    background-color: lightcyan;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tratada{
+    display: inline-block;
+    background-color: lightcyan;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.tratada > p {
+    display: none;
+}
+
+.tratada:hover > p {
+    display: block;
+}
+
+p::after{
+    content: ' vasco';
+    text-decoration: none;
+    font-weight: normal;
+    color: darkgray;
+}
+
+p::before{
+    content: ' >>';
+}
+
+    </style>
+</head>
+<body>
+  <h1 class="exemplo">Exemplo de caixa 1</h1>
+  <h1 class="de">Exemplo de caixa 2</h1>
+  <h1 class="caixa">Exemplo de caixa 3</h1>  
+
+  <br><br>
+<div class="simples">
+   01
+</div>
+<br>
+<div class="tratada">
+    02
+    <p>pinto</p>
+</div>
+<div class="tratada">03</div>
+<br>
+<p>vegetti</p>
+</body>
+</html>
