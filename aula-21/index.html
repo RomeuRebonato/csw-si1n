@@ -23,6 +23,15 @@ background-color: rgb(243, 242, 242);
             border-style: solid;
             position: absolute;
             z-index: 2;
+            background-image: url(./images.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .container {
             position: relative; 
@@ -42,7 +51,7 @@ background-color: rgb(243, 242, 242);
             color: blue;
         }
        .ano{
-        width: 30px;
+        width: 50px;
 
        }
        .idade{
@@ -52,36 +61,121 @@ background-color: rgb(243, 242, 242);
         top: 30%;
         left: 50%;
         transform: translate(-50%,-50%);
+        background-color: blue;
+        color: white;
        }
+       .textoidade{
+         position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+     size: 10px;
+       }
+       .falaridade{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+        size: 12px;
+       }
+       .imagemcalculadora{
+        border: 10px;
+            border-color: blue;
+            border-style: solid;
+            position: absolute;
+            z-index: 2;
+            background-image: url(./imagemcalculadora2.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+       }
+       
+      
+      
+       
+       .calcular{
+        width: 600px;
+        height: 50px;
+         position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        background-color: blue;
+        color: white;
+       }
+.inputcalc{
+    position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
+.resultado{
+    position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+}
     </style>
 </head>
 <body>
     <div class="caixabranca">
     <div class="container">
     <div class="imagem">
-        <img src="./images.jpg" alt="" width="300px" height="100px">
+        <p class="textoidade">calcular idade</p>
     </div>
     <br><br><br><br><br><br><br><br>
      Data de nascimento:
-    <input type="number" class="dia">
-    <select name="mês" id="">
-        <option value="janeiro">janeiro</option>
-        <option value="Fevereiro">Fevereiro</option>
-        <option value="Março">Março</option>
-        <option value="Abril">Abril</option>
-        <option value="Maio">Maio</option>
+    <input type="number" id="dia" class="dia" min="1" max="31" maxlength="2">
+    <select name="mês" id="mes" >
+        <option value="01">janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09"></option>Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+
     </select>
-    <input type="number" class="ano">
+    <input type="number" id="ano" class="ano" min="1900" max="2025">
     <div class="caixabranca">
         <br>
-        <button class="idade" id="idade" onclick="calcularidade()">Calcular Idada</button>
+        <button class="idade" id="idade" onclick="calcularidade()">Calcular Idade</button>
+       
+        <p id="falaridade" class="falaridade"></p>
+
+
+        <br><br><br>
+        <div class="imagemcalculadora"></div>
+        <div class="inputcalc">
+<input type="number" class="numero1" id="numero1">
+<select name="operacao" id="operacao" class="operacao">
+    <option value="+">+</option>
+      <option value="-">-</option>
+        <option value="*">*</option>
+          <option value="/">/</option>
+</select>
+<input type="number" class="numero2" id="numero2">
+</div>
+<button class="calcular" onclick="calcular( )">Calcular</button>
+<p id="resultado" class="resultado"></p>
+
     </div>
-        
-        
-        
-        
-        
         <div>
-            <script src="script/js"></script>
+             <script src="script.js"></script>
 </body>
 </html>
